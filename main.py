@@ -92,7 +92,6 @@ def collision(x1,y1,x2,y2):
         return False
 
 pygame.display.flip()
-scoreUpdate(10, 10)
 game_running = True
 while game_running:
     pygame.draw.line(window, (200, 200, 200), (0, 350), (800, 350))
@@ -113,7 +112,7 @@ while game_running:
             keys_pressed2 = pygame.key.get_pressed()
             if keys_pressed2[pygame.K_ESCAPE]:
                 mixer.music.stop()
-                game_running = False
+                exec(open('Welcome.py').read())
             if event.key == pygame.K_LEFT:
                 changeX = -3
             elif event.key == pygame.K_RIGHT:
