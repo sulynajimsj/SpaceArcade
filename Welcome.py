@@ -10,11 +10,13 @@ height = screen.get_height()
 
 # defining a font
 bigfont = pygame.font.SysFont('Anima', 70)
-smallfont = pygame.font.SysFont('Segoe UI', 20)
-smallerfont = pygame.font.SysFont('Segoe UI', 15)
+smallfont = pygame.font.SysFont('Segoe UI', 35)
+smallerfont = pygame.font.SysFont('Segoe UI', 13)
 text = smallfont.render('Left Arrow for Space Invader', True, (250,250,250))
 text2 = smallfont.render('Right Arrow for Space PVP (NEW!)', True, (250,250,250))
-textesc = smallerfont.render('Start with Left game to avoid a crash', True, (250,250,250))
+textesc = smallerfont.render('Start with Left game (Space Invader) to avoid a crash', True, (250,250,250))
+textesc2 = smallerfont.render('Esc to return to menu and close tabs for best experience :)', True, (250,250,250))
+
 text3 = bigfont.render("Space Arcade", True, (250,250,250))
 
 
@@ -32,8 +34,9 @@ while True:
 
 
     screen.fill((60, 25, 60))
-    screen.blit(text, (200, height / 2))
+    screen.blit(text, (200, height / 2 - 100))
     screen.blit(text2, (200, height / 2+100))
     screen.blit(text3, (200, 50))
-    screen.blit(textesc, (250, height/2 + 180))
+    screen.blit(textesc, (210, height/2 + 250))
+    screen.blit(textesc2, (210, height/2 + 280))
     pygame.display.update()
