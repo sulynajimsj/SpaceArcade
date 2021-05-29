@@ -131,7 +131,10 @@ def main():
                 pygame.quit()
 
             if event.type == pygame.KEYDOWN:
-                if event.type == pygame.K_1:
+                
+                #Add exit function
+                keys_pressed2 = pygame.key.get_pressed()
+                if keys_pressed2[pygame.K_ESCAPE]:
                     exec(open('Welcome.py').read())
 
                 if event.key == pygame.K_LCTRL and len(yellow_bullets) < MAX_BULLETS:
