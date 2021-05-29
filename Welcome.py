@@ -14,7 +14,7 @@ smallfont = pygame.font.SysFont('Segoe UI', 25)
 smallerfont = pygame.font.SysFont('Segoe UI', 10)
 text = smallfont.render('Left Arrow for Space Invader', True, (250,250,250))
 text2 = smallfont.render('Right Arrow for Space PVP (NEW!)', True, (250,250,250))
-textesc = smallerfont.render('Start with Left game (Space Invader) to avoid a crash', True, (250,250,250))
+textesc = smallerfont.render('Start with Left game (Space Invader) then play right game (PVP) to avoid a crash', True, (250,250,250))
 textesc2 = smallerfont.render('Esc to return to menu and close tabs for best experience :)', True, (250,250,250))
 
 text3 = bigfont.render("Space Arcade", True, (250,250,250))
