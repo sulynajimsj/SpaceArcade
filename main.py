@@ -109,13 +109,14 @@ while game_running:
 
         #If keystroke = press left or right add features
         if event.type == pygame.KEYDOWN:
+            keys_pressed2 = pygame.key.get_pressed()
+            if keys_pressed2[pygame.K_ESCAPE]:
+                mixer.music.stop()
+                game_running = False
             if event.key == pygame.K_LEFT:
                 changeX = -3
             elif event.key == pygame.K_RIGHT:
                 changeX = 3
-            elif event.key == pygame.K_UP:
-                mixer.music.stop()
-                game_running = False
             elif event.key == pygame.K_SPACE:
                 if bulletState == "ready":
                     #This gets the X coordinate of the spaceship
@@ -189,7 +190,7 @@ while game_running:
     scoreUpdate(10, 10)
     player(playerX, playerY)
     # Add exit text
-    exit = score_font.render("Exit: Up key", True, (230, 230, 230))
+    exit = score_font.render("Exit: Esc", True, (230, 230, 230))
     window.blit(exit, (680, 10))
 
     pygame.draw.line(window, (200, 200, 200), (0, 350), (800, 350))
