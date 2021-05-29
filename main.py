@@ -43,7 +43,7 @@ numofEnemys = 6
 
 for i in range(numofEnemys):
     enemyImage.append(pygame.image.load('enemy.png'))
-    enemyX.append(random.randint(0,800))
+    enemyX.append(random.randint(0,735))
     enemyY.append(random.randint(50,100))
     changeEnemyX.append(2.2)
     changeEnemyY.append(40)
@@ -188,6 +188,12 @@ while game_running:
 
     scoreUpdate(10, 10)
     player(playerX, playerY)
+    # Add exit text
+    exit = score_font.render("Exit: Up key", True, (230, 230, 230))
+    window.blit(exit, (680, 10))
+
+    pygame.draw.line(window, (200, 200, 200), (0, 350), (800, 350))
+    pygame.display.flip()
 
     pygame.display.update()
     # We have to add display.update whenever we make a change to update the window
