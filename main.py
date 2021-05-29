@@ -92,6 +92,7 @@ def collision(x1,y1,x2,y2):
         return False
 
 pygame.display.flip()
+scoreUpdate(10, 10)
 game_running = True
 while game_running:
     pygame.draw.line(window, (200, 200, 200), (0, 350), (800, 350))
