@@ -2,6 +2,8 @@
 This is an arcade for space games like space invaders and a PVP Space War game :)
 Created using Python and the PyGame library
 
+Linked to Devpost Project: https://devpost.com/software/spacearcade
+
 To try the games out:
 1. Download the repo
 2. Open it in a python idle
